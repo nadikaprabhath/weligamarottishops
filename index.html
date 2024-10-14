@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Menu</title>
+    <title>Weligama Rotti Shop</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Restaurant Menu</h1>
+        <h1>Our Menu</h1>
     </header>
 
     <main>
@@ -19,33 +19,25 @@
                 <button class="filter-button" data-filter="Grill" onclick="filterMenu('Grill')">Grill</button>
                 <button class="filter-button" data-filter="Pasta" onclick="filterMenu('Pasta')">Pasta</button>
                 <button class="filter-button" data-filter="Sushi" onclick="filterMenu('Sushi')">Sushi</button>
-                <button class="filter-button" data-filter="all" onclick="filterMenu('all')">All</button>
-                <button class="filter-button" data-filter="Grill" onclick="filterMenu('Grill')">Grill</button>
-                <button class="filter-button" data-filter="Pasta" onclick="filterMenu('Pasta')">Pasta</button>
-                <button class="filter-button" data-filter="Sushi" onclick="filterMenu('Sushi')">Sushi</button>
-                <button class="filter-button" data-filter="all" onclick="filterMenu('all')">All</button>
-                <button class="filter-button" data-filter="Grill" onclick="filterMenu('Grill')">Grill</button>
-                <button class="filter-button" data-filter="Pasta" onclick="filterMenu('Pasta')">Pasta</button>
-                <button class="filter-button" data-filter="Sushi" onclick="filterMenu('Sushi')">Sushi</button>
-                <button class="filter-button" data-filter="all" onclick="filterMenu('all')">All</button>
-                <button class="filter-button" data-filter="Grill" onclick="filterMenu('Grill')">Grill</button>
-                <button class="filter-button" data-filter="Pasta" onclick="filterMenu('Pasta')">Pasta</button>
-                <button class="filter-button" data-filter="Sushi" onclick="filterMenu('Sushi')">Sushi</button>
-                <!-- Add more buttons for additional food categories -->
             </div>
+        </section>
+
+        <!-- Search Bar -->
+        <section class="search-bar">
+            <input type="text" id="searchInput" onkeyup="searchMenu()" placeholder="Search for menu items...">
         </section>
 
         <section id="menu">
             <h2>Our Menu</h2>
             <div class="menu-container" id="menuContainer">
-                <div class="menu-card" data-category="Grill" onclick="openModal('Grilled Chicken', 'Tender grilled chicken served with roasted vegetables', 'USD 12', 'images/grilled-chicken.jpg')">
-                    <img src="images/grilled-chicken.jpg" alt="Grilled Chicken">
+                <div class="menu-card" data-category="Grill" onclick="openModal('Grilled Chicken', 'Tender grilled chicken served with roasted vegetables', 'USD 12', 'assert/img1.jpg')">
+                    <img src="assert/img1.jpg" alt="Grilled Chicken">
                     <h3>Grilled Chicken</h3>
                     <p>USD 12</p>
                 </div>
 
-                <div class="menu-card" data-category="Pasta" onclick="openModal('Pasta Carbonara', 'Creamy pasta with pancetta and parmesan', 'USD 15', 'images/pasta-carbonara.jpg')">
-                    <img src="images/pasta-carbonara.jpg" alt="Pasta Carbonara">
+                <div class="menu-card" data-category="Pasta" onclick="openModal('Pasta Carbonara', 'Creamy pasta with pancetta and parmesan', 'USD 15', 'assert/rice.jpg')">
+                    <img src="assert/rice.jpg" alt="Pasta Carbonara">
                     <h3>Pasta Carbonara</h3>
                     <p>USD 15</p>
                 </div>
@@ -55,7 +47,6 @@
                     <h3>Sushi Rolls</h3>
                     <p>USD 20</p>
                 </div>
-                <!-- Add more menu cards as needed -->
             </div>
         </section>
     </main>
@@ -73,7 +64,7 @@
     </div>
 
     <footer>
-        <p>© 2024 Restaurant Name. All Rights Reserved.</p>
+        <p>© 2024 Weligama Rotti Shop. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
