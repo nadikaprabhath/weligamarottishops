@@ -12,34 +12,40 @@
     </header>
 
     <main>
-        <!-- Search Bar -->
-        <section class="search-bar">
-            <input type="text" id="searchInput" onkeyup="searchMenu()" placeholder="Search for menu items...">
-        </section>
-
-        <!-- Filter -->
-        <section class="filter-bar">
-            <label for="filter">Filter by Category:</label>
-            <select id="filter" onchange="filterMenu()">
-                <option value="all">All</option>
-                <option value="Grill">Grill</option>
-                <option value="Pasta">Pasta</option>
-                <option value="Sushi">Sushi</option>
-                <!-- Add more categories as needed -->
-            </select>
+        <!-- Horizontal Food Name Filter -->
+        <section class="horizontal-filter-bar">
+            <div id="filterBar">
+                <button class="filter-button active" data-filter="all" onclick="filterMenu('all')">All</button>
+                <button class="filter-button" data-filter="Grill" onclick="filterMenu('Grill')">Grill</button>
+                <button class="filter-button" data-filter="Pasta" onclick="filterMenu('Pasta')">Pasta</button>
+                <button class="filter-button" data-filter="Sushi" onclick="filterMenu('Sushi')">Sushi</button>
+                <button class="filter-button" data-filter="all" onclick="filterMenu('all')">All</button>
+                <button class="filter-button" data-filter="Grill" onclick="filterMenu('Grill')">Grill</button>
+                <button class="filter-button" data-filter="Pasta" onclick="filterMenu('Pasta')">Pasta</button>
+                <button class="filter-button" data-filter="Sushi" onclick="filterMenu('Sushi')">Sushi</button>
+                <button class="filter-button" data-filter="all" onclick="filterMenu('all')">All</button>
+                <button class="filter-button" data-filter="Grill" onclick="filterMenu('Grill')">Grill</button>
+                <button class="filter-button" data-filter="Pasta" onclick="filterMenu('Pasta')">Pasta</button>
+                <button class="filter-button" data-filter="Sushi" onclick="filterMenu('Sushi')">Sushi</button>
+                <button class="filter-button" data-filter="all" onclick="filterMenu('all')">All</button>
+                <button class="filter-button" data-filter="Grill" onclick="filterMenu('Grill')">Grill</button>
+                <button class="filter-button" data-filter="Pasta" onclick="filterMenu('Pasta')">Pasta</button>
+                <button class="filter-button" data-filter="Sushi" onclick="filterMenu('Sushi')">Sushi</button>
+                <!-- Add more buttons for additional food categories -->
+            </div>
         </section>
 
         <section id="menu">
             <h2>Our Menu</h2>
             <div class="menu-container" id="menuContainer">
-                <div class="menu-card" data-category="Grill" onclick="openModal('Grilled Chicken', 'Tender grilled chicken served with roasted vegetables', 'USD 12', 'assert/img1.jpg')">
-                    <img src="assert/img1.jpg" alt="Grilled Chicken">
+                <div class="menu-card" data-category="Grill" onclick="openModal('Grilled Chicken', 'Tender grilled chicken served with roasted vegetables', 'USD 12', 'images/grilled-chicken.jpg')">
+                    <img src="images/grilled-chicken.jpg" alt="Grilled Chicken">
                     <h3>Grilled Chicken</h3>
                     <p>USD 12</p>
                 </div>
 
-                <div class="menu-card" data-category="Pasta" onclick="openModal('Pasta Carbonara', 'Creamy pasta with pancetta and parmesan', 'USD 15', 'assert/rice.jpg')">
-                    <img src="assert/rice.jpg" alt="Pasta Carbonara">
+                <div class="menu-card" data-category="Pasta" onclick="openModal('Pasta Carbonara', 'Creamy pasta with pancetta and parmesan', 'USD 15', 'images/pasta-carbonara.jpg')">
+                    <img src="images/pasta-carbonara.jpg" alt="Pasta Carbonara">
                     <h3>Pasta Carbonara</h3>
                     <p>USD 15</p>
                 </div>

@@ -21,28 +21,22 @@ window.onclick = function(event) {
 }
 
 // Filter Menu by Category
-function filterMenu() {
-    const filterValue = document.getElementById('filter').value.toLowerCase();
+function filterMenu(category) {
     const cards = document.querySelectorAll('.menu-card');
+    const buttons = document.querySelectorAll('.filter-button');
 
-    cards.forEach(card => {
-        const category = card.getAttribute('data-category').toLowerCase();
-        if (filterValue === 'all' || category === filterValue) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
+    // Highlight the active filter button
+    buttons.forEach(button => {
+        button.classList.remove('active');
+        if (button.getAttribute('data-filter') === category) {
+            button.classList.add('active');
         }
     });
-}
 
-// Search Menu by Name
-function searchMenu() {
-    const searchValue = document.getElementById('searchInput').value.toLowerCase();
-    const cards = document.querySelectorAll('.menu-card');
-
+    // Filter the cards
     cards.forEach(card => {
-        const title = card.querySelector('h3').textContent.toLowerCase();
-        if (title.includes(searchValue)) {
+        const cardCategory = card.getAttribute('data-category');
+        if (category === 'all' || cardCategory === category) {
             card.style.display = 'block';
         } else {
             card.style.display = 'none';
