@@ -138,3 +138,54 @@ footer {
     background-color: #fff;
     box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
 }
+/* General styles are applied to all devices by default */
+
+/* For devices with a screen width of 768px or less (tablets and mobile) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .hero-image {
+        height: 200px;
+    }
+
+    .modal-content {
+        width: 90%;
+    }
+}
+
+/* For devices with a screen width of 480px or less (small phones) */
+@media (max-width: 480px) {
+    nav ul {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul li {
+        margin-bottom: 10px;
+    }
+
+    .hero-image {
+        height: 150px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .card img {
+        height: 150px;
+    }
+}
