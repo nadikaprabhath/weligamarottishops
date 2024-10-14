@@ -1,191 +1,139 @@
+/* Global Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-    background-color: #f4f4f9;
+    background-color: #f9f9f9;
 }
 
 header {
-    background-color: #fff;
-    padding: 10px 20px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    padding: 0;
-}
-
-nav ul li {
-    margin: 0 15px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-weight: bold;
-}
-
-.hero-image {
-    background: url('hero.jpg') no-repeat center center;
-    background-size: cover;
-    height: 300px;
-    margin-bottom: 20px;
+h1 {
+    margin: 0;
 }
 
 main {
     padding: 20px;
 }
 
-section {
-    margin-bottom: 40px;
-}
-
 h2 {
-    margin-bottom: 20px;
-    border-bottom: 2px solid #ddd;
-    padding-bottom: 10px;
+    text-align: center;
+    margin-bottom: 30px;
 }
 
-.card-container {
+/* Menu Styles */
+.menu-container {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
+    justify-content: center;
 }
 
-.card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    overflow: hidden;
-    flex: 1 1 calc(33.333% - 20px);
-    max-width: calc(33.333% - 20px);
+.menu-card {
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 250px;
     cursor: pointer;
-    transition: transform 0.2s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-content {
-    padding: 15px;
+    transition: transform 0.3s;
     text-align: center;
 }
 
+.menu-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.menu-card h3 {
+    margin: 15px 0 5px;
+}
+
+.menu-card p {
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Modal Styles */
 .modal {
     display: none;
     position: fixed;
-    z-index: 1;
+    z-index: 1000;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
-    background-color: rgba(0,0,0,0.4);
-    padding-top: 60px;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
 }
 
 .modal-content {
-    background-color: #fefefe;
-    margin: 5% auto;
+    background-color: #fff;
     padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-    max-width: 500px;
+    border-radius: 10px;
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    max-width: 500px;
+    width: 90%;
+    margin: auto;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-.modal-content img {
+.modal img {
     width: 100%;
-    height: auto;
-    max-height: 300px; /* Adjust as needed */
-    object-fit: contain;
+    height: 250px;
+    object-fit: cover;
     margin-bottom: 20px;
 }
 
 .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.close:hover,
-.close:focus {
-    color: black;
-    text-decoration: none;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 30px;
     cursor: pointer;
 }
 
+/* Footer Styles */
 footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+    padding: 20px 0;
+    margin-top: 30px;
 }
-/* General styles are applied to all devices by default */
 
-/* For devices with a screen width of 768px or less (tablets and mobile) */
+footer p {
+    margin: 0;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .card {
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
-
-    .hero-image {
-        height: 200px;
-    }
-
-    .modal-content {
-        width: 90%;
+    .menu-card {
+        width: 100%;
     }
 }
 
-/* For devices with a screen width of 480px or less (small phones) */
 @media (max-width: 480px) {
-    nav ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    nav ul li {
-        margin-bottom: 10px;
-    }
-
-    .hero-image {
-        height: 150px;
-    }
-
     h2 {
         font-size: 24px;
     }
 
-    .card img {
+    .menu-card img {
         height: 150px;
+    }
+
+    .modal-content img {
+        height: 200px;
     }
 }

@@ -3,50 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weligama Rotti Shop</title>
+    <title>Restaurant Menu</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <nav>
-            <ul>
-                <li><a href="#starters">Starters</a></li>
-                <li><a href="#pasta">Pasta</a></li>
-                <li><a href="#burgers">Burgers</a></li>
-                <li><a href="#grill">Grill</a></li>
-                <li><a href="#sushi">Sushi Rolls</a></li>
-                <li><a href="#beverages">Beverages</a></li>
-            </ul>
-        </nav>
+        <h1>Restaurant Menu</h1>
     </header>
 
-    <div class="hero-image"></div>
-
     <main>
-        <section id="starters">
-            <h2>Starters</h2>
-            <div class="card-container">
-                <div class="card" onclick="openModal('Spicy Potato', 'Vegetarian', 'Potato with spicy garlic sauce, parsley, lemon spices', 'AED 28', 'spicy-potato.jpg')">
-                    <img src="assert/rice.jpg" alt="Spicy Potato">
-                    <div class="card-content">
-                        <h3>Spicy Potato</h3>
-                        <p>AED 28</p>
-                    </div>
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div class="menu-container">
+                <div class="menu-card" onclick="openModal('Grilled Chicken', 'Tender grilled chicken served with roasted vegetables', 'USD 12', 'images/grilled-chicken.jpg')">
+                    <img src="images/grilled-chicken.jpg" alt="Grilled Chicken">
+                    <h3>Grilled Chicken</h3>
+                    <p>USD 12</p>
                 </div>
-                <!-- More starter cards -->
+
+                <div class="menu-card" onclick="openModal('Pasta Carbonara', 'Creamy pasta with pancetta and parmesan', 'USD 15', 'images/pasta-carbonara.jpg')">
+                    <img src="images/pasta-carbonara.jpg" alt="Pasta Carbonara">
+                    <h3>Pasta Carbonara</h3>
+                    <p>USD 15</p>
+                </div>
+
+                <div class="menu-card" onclick="openModal('Sushi Rolls', 'Freshly made sushi rolls with salmon and avocado', 'USD 20', 'images/sushi-rolls.jpg')">
+                    <img src="images/sushi-rolls.jpg" alt="Sushi Rolls">
+                    <h3>Sushi Rolls</h3>
+                    <p>USD 20</p>
+                </div>
+                <!-- Add more menu cards as needed -->
             </div>
         </section>
-
-        <!-- Additional sections for Pasta, Burgers, Grill, Sushi, Beverages -->
-
     </main>
 
+    <!-- Modal Structure -->
     <div id="modal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal()">&times;</span>
             <img id="modal-image" src="" alt="">
             <h3 id="modal-title"></h3>
-            <p id="modal-type"></p>
             <p id="modal-description"></p>
             <p id="modal-price"></p>
             <button onclick="closeModal()">Close</button>
@@ -54,7 +50,7 @@
     </div>
 
     <footer>
-        <p>Menu created by nadikaprabhath</p>
+        <p>© 2024 Restaurant Name. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
