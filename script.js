@@ -1,67 +1,25 @@
-// Open Modal
-function openModal(title, description, price, imageSrc) {
-    document.getElementById('modal-title').textContent = title;
-    document.getElementById('modal-description').textContent = description;
-    document.getElementById('modal-price').textContent = price;
-    document.getElementById('modal-image').src = imageSrc;
-    document.getElementById('modal').style.display = 'flex';
-}
+// Get all filter buttons and menu cards
+const filterButtons = document.querySelectorAll('.filter-btn');
+const menuCards = document.querySelectorAll('.menu-card');
 
-// Close Modal
-function closeModal() {
-    document.getElementById('modal').style.display = 'none';
-}
+// Add click event to all filter buttons
+filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+        const category = button.getAttribute('data-category');
 
-// Close modal if clicked outside the content area
-window.onclick = function(event) {
-    const modal = document.getElementById('modal');
-    if (event.target === modal) {
-        closeModal();
-    }
-}
+        // Remove active class from all buttons
+        filterButtons.forEach(btn => btn.classList.remove('active'));
 
-// Filter Menu by Category
-function filterMenu(category) {
-    const searchValue = document.getElementById('searchInput').value.toLowerCase();
-    const cards = document.querySelectorAll('.menu-card');
-    const buttons = document.querySelectorAll('.filter-button');
+        // Add active class to the clicked button
+        button.classList.add('active');
 
-    // Highlight the active filter button
-    buttons.forEach(button => {
-        button.classList.remove('active');
-        if (button.getAttribute('data-filter') === category) {
-            button.classList.add('active');
-        }
+        // Show/Hide cards based on category
+        menuCards.forEach(card => {
+            if (category === 'all' || card.getAttribute('data-category') === category) {
+                card.style.display = 'block';
+            } else {
+                card.style.display = 'none';
+            }
+        });
     });
-
-    // Filter the cards based on category and search term
-    cards.forEach(card => {
-        const cardCategory = card.getAttribute('data-category');
-        const cardTitle = card.querySelector('h3').textContent.toLowerCase();
-
-        if ((category === 'all' || cardCategory === category) && cardTitle.includes(searchValue)) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
-    });
-}
-
-// Search Menu
-function searchMenu() {
-    const searchValue = document.getElementById('searchInput').value.toLowerCase();
-    const category = document.querySelector('.filter-button.active').getAttribute('data-filter');
-    const cards = document.querySelectorAll('.menu-card');
-
-    // Filter the cards based on the active category and search term
-    cards.forEach(card => {
-        const cardCategory = card.getAttribute('data-category');
-        const cardTitle = card.querySelector('h3').textContent.toLowerCase();
-
-        if ((category === 'all' || cardCategory === category) && cardTitle.includes(searchValue)) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
-    });
-}
+});

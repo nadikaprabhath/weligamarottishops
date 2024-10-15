@@ -1,189 +1,234 @@
-/* Global Styles */
-body {
-    font-family: Arial, sans-serif;
+/* Define CSS Variables for Reusable Colors */
+:root {
+    --primary-color: #ff4747;
+    --secondary-color: #333;
+    --light-color: #f3f3f3;
+    --font-color: #fff;
+    --hover-color: #ff6b6b;
+    --text-dark: #333;
+    --text-light: #fff;
+}
+
+* {
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+    background-color: var(--light-color);
 }
 
 header {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-
-h1 {
-    margin: 0;
-}
-
-main {
+    background-color: var(--secondary-color);
     padding: 20px;
-}
-
-h2 {
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-/* Horizontal Filter Bar */
-.horizontal-filter-bar {
-    overflow-x: auto;
-    white-space: nowrap;
-    padding: 10px 0;
-    background-color: #fff;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-#filterBar {
-    display: inline-block;
-}
-
-.filter-button {
-    padding: 10px 20px;
-    background-color: #f4f4f4;
-    border: none;
-    color: #333;
-    font-size: 16px;
-    border-radius: 20px;
-    cursor: pointer;
-    margin: 5px;
-    display: inline-block;
-}
-
-.filter-button.active {
-    background-color: #007BFF;
-    color: #fff;
-}
-
-.filter-button:hover {
-    background-color: #007BFF;
-    color: #fff;
-}
-
-/* Search Bar */
-.search-bar {
-    text-align: center;
-    margin: 20px 0;
-}
-
-.search-bar input {
-    padding: 10px;
-    width: 80%;
-    max-width: 400px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-}
-
-/* Menu Styles */
-.menu-container {
+    color: var(--font-color);
     display: flex;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header .logo h1 {
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
     gap: 20px;
-    justify-content: center;
+}
+
+header nav ul li a {
+    color: var(--font-color);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover {
+    color: var(--primary-color);
+}
+
+.menu-header {
+    text-align: center;
+    padding: 40px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.1)), url('https://via.placeholder.com/150') center/cover;
+    color: var(--font-color);
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.categories {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.categories .filter-btn {
+    padding: 12px 25px;
+    border: none;
+    background-color: var(--light-color);
+    margin: 5px;
+    cursor: pointer;
+    border-radius: 25px;
+    font-size: 1rem;
+    color: var(--text-dark);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.categories .filter-btn:hover {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    transform: scale(1.05);
+}
+
+.categories .filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--font-color);
+    transform: scale(1.1);
+}
+
+.menu-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    padding: 40px;
+    justify-items: center;
 }
 
 .menu-card {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    width: 250px;
-    cursor: pointer;
-    transition: transform 0.3s;
+    background-color: var(--text-light);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
     text-align: center;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+}
+
+.menu-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .menu-card img {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    border-radius: 10px 10px 0 0;
+    border-radius: 10px;
+    transition: opacity 0.3s ease;
+}
+
+.menu-card:hover img {
+    opacity: 0.9;
 }
 
 .menu-card h3 {
-    margin: 15px 0 5px;
+    margin: 15px 0;
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    text-transform: capitalize;
 }
 
 .menu-card p {
-    color: #555;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+footer {
+    background-color: var(--secondary-color);
+    color: var(--text-light);
+    padding: 60px 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer .footer-container {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+}
+
+footer .footer-section {
+    flex: 1;
+    min-width: 200px;
+}
+
+footer .footer-section h4 {
+    font-size: 1.2rem;
     margin-bottom: 15px;
 }
 
-.menu-card:hover {
-    transform: translateY(-5px);
+footer .footer-section ul {
+    list-style: none;
+    padding-left: 0;
 }
 
-/* Modal Styles */
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
-    justify-content: center;
-    align-items: center;
+footer .footer-section ul li {
+    margin-bottom: 10px;
 }
 
-.modal-content {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    max-width: 500px;
-    width: 90%;
-    margin: auto;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+footer .footer-section ul li a {
+    color: var(--text-light);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
 }
 
-.modal img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    margin-bottom: 20px;
+footer .footer-section ul li a:hover {
+    color: var(--hover-color);
 }
 
-.close {
-    position: absolute;
-    top: 10px;
-    right: 20px;
-    font-size: 30px;
-    cursor: pointer;
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
-/* Footer Styles */
-footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 30px;
+.menu-card {
+    animation: fadeIn 0.6s ease-in-out;
 }
 
-footer p {
-    margin: 0;
-}
-
-/* Responsive Styles */
+/* Media Queries */
 @media (max-width: 768px) {
-    .menu-card {
-        width: 100%;
-    }
-}
-
-@media (max-width: 480px) {
-    h2 {
-        font-size: 24px;
+    header {
+        flex-direction: column;
+        text-align: center;
     }
 
-    .menu-card img {
-        height: 150px;
+    .menu-header {
+        padding: 20px;
+        font-size: 1.5rem;
     }
 
-    .modal-content img {
-        height: 200px;
+    .menu-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    footer .footer-container {
+        flex-direction: column;
+        text-align: center;
     }
 }
