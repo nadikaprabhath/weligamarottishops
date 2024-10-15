@@ -3,97 +3,68 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu Style</title>
+    <title>Restaurant Menu</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <div class="logo">
-            <h1>SWIGO</h1>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Pages</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Blogs</a></li>
-                <li><a href="#">Contact Us</a></li>
-            </ul>
-        </nav>
+        <h1>Restaurant Menu</h1>
     </header>
 
-    <section class="menu-header">
-        <h2>Menu Style 3</h2>
-        <div class="breadcrumb">
-            <a href="#">Home</a> > <a href="#">Menu Style 3</a>
-        </div>
-    </section>
+    <main>
+        <!-- Horizontal Food Name Filter -->
+        <section class="horizontal-filter-bar">
+            <div id="filterBar">
+                <button class="filter-button active" data-filter="all" onclick="filterMenu('all')">All</button>
+                <button class="filter-button" data-filter="Grill" onclick="filterMenu('Grill')">Grill</button>
+                <button class="filter-button" data-filter="Pasta" onclick="filterMenu('Pasta')">Pasta</button>
+                <button class="filter-button" data-filter="Sushi" onclick="filterMenu('Sushi')">Sushi</button>
+            </div>
+        </section>
 
-    <section class="categories">
-        <button class="filter-btn active" data-category="all">All</button>
-        <button class="filter-btn" data-category="drinks">Drinks</button>
-        <button class="filter-btn" data-category="pizza">Pizza</button>
-        <button class="filter-btn" data-category="salad">Salad</button>
-        <button class="filter-btn" data-category="spicy">Spicy</button>
-        <button class="filter-btn" data-category="sweets">Sweets</button>
-    </section>
+        <!-- Search Bar -->
+        <section class="search-bar">
+            <input type="text" id="searchInput" onkeyup="searchMenu()" placeholder="Search for menu items...">
+        </section>
 
-    <section class="menu-container">
-        <div class="menu-card" data-category="burger">
-            <img src="assert/img1.jpg" alt="Double Patty Veg Burger">
-            <h3>Double Patty Veg Burger</h3>
-            <p>$40.00</p>
+        <section id="menu">
+            <h2>Our Menu</h2>
+            <div class="menu-container" id="menuContainer">
+                <div class="menu-card" data-category="Grill" onclick="openModal('Grilled Chicken', 'Tender grilled chicken served with roasted vegetables', 'USD 12', 'images/grilled-chicken.jpg')">
+                    <img src="images/grilled-chicken.jpg" alt="Grilled Chicken">
+                    <h3>Grilled Chicken</h3>
+                    <p>USD 12</p>
+                </div>
+
+                <div class="menu-card" data-category="Pasta" onclick="openModal('Pasta Carbonara', 'Creamy pasta with pancetta and parmesan', 'USD 15', 'images/pasta-carbonara.jpg')">
+                    <img src="images/pasta-carbonara.jpg" alt="Pasta Carbonara">
+                    <h3>Pasta Carbonara</h3>
+                    <p>USD 15</p>
+                </div>
+
+                <div class="menu-card" data-category="Sushi" onclick="openModal('Sushi Rolls', 'Freshly made sushi rolls with salmon and avocado', 'USD 20', 'images/sushi-rolls.jpg')">
+                    <img src="images/sushi-rolls.jpg" alt="Sushi Rolls">
+                    <h3>Sushi Rolls</h3>
+                    <p>USD 20</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal Structure -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modal-image" src="" alt="">
+            <h3 id="modal-title"></h3>
+            <p id="modal-description"></p>
+            <p id="modal-price"></p>
+            <button onclick="closeModal()">Close</button>
         </div>
-        <div class="menu-card" data-category="burger">
-            <img src="assert/rice.jpg" alt="Chicken Burger">
-            <h3>Chicken Burger</h3>
-            <p>$17.56</p>
-        </div>
-        <div class="menu-card" data-category="pizza">
-            <img src="https://via.placeholder.com/150" alt="Pineapple Pizza">
-            <h3>Pineapple Pizza</h3>
-            <p>$24.50</p>
-        </div>
-        <div class="menu-card" data-category="salad">
-            <img src="https://via.placeholder.com/150" alt="Green Salad">
-            <h3>Green Salad</h3>
-            <p>$45.00</p>
-        </div>
-        <!-- Add more cards here -->
-    </section>
+    </div>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h4>Contact Us</h4>
-                <p>1247/Plot No. 39, 15th Phase, Colony, Hyderabad</p>
-                <p>+91 987-654-3210</p>
-                <p>info@example.com</p>
-            </div>
-            <div class="footer-section">
-                <h4>Our Links</h4>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">FAQ</a></li>
-                    <li><a href="#">Team</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Our Services</h4>
-                <ul>
-                    <li><a href="#">Table Service</a></li>
-                    <li><a href="#">Quick Delivery</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h4>Help Center</h4>
-                <ul>
-                    <li><a href="#">Service</a></li>
-                    <li><a href="#">Coming Soon</a></li>
-                </ul>
-            </div>
-        </div>
+        <p>© 2024 Restaurant Name. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
