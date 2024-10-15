@@ -90,14 +90,14 @@ function searchMenu() {
     });
 
     // Delay hiding the keyboard to make sure all events are handled
-    setTimeout(() => {
+    // setTimeout(() => {
         // Automatically remove focus to hide the keyboard
         document.getElementById('searchInput').blur();
-    }, 200); // A short delay of 200ms should be sufficient
+    // }, 900); // A short delay of 200ms should be sufficient
 }
 
 
-// // Hide keyboard on touch after search is completed
+// Hide keyboard on touch after search is completed
 // document.getElementById('searchInput').addEventListener('touchend', function (event) {
 //     if (event.key === 'Enter' || event.type === 'touchend') {
 //         searchMenu(); // Trigger the search
