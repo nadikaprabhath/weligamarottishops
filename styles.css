@@ -7,8 +7,6 @@ body {
     background-color: #f0f0f5;
     line-height: 1.5;
     color: #333;
-    max-width: 1400px;
-    margin:0 auto; 
 }
 
 /* header {
@@ -30,6 +28,7 @@ header {
     font-size: 0.7rem;
     letter-spacing: 2px;
     text-transform: uppercase;
+
 }
 
 h1 {
@@ -127,6 +126,8 @@ h2 {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    max-width: 1400px;
+    margin:0 auto; 
 }
 
 .menu-card {
