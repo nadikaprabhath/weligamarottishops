@@ -71,12 +71,13 @@ function filterMenu(category) {
 
 
 
+
+
 function searchMenu() {
     const searchValue = document.getElementById('searchInput').value.toLowerCase();
     const category = document.querySelector('.filter-button.active').getAttribute('data-filter');
     const cards = document.querySelectorAll('.menu-card');
 
-    // Filter the cards based on the active category and search term
     cards.forEach(card => {
         const cardCategory = card.getAttribute('data-category');
         const cardTitle = card.querySelector('h3').textContent.toLowerCase();
@@ -88,13 +89,17 @@ function searchMenu() {
         }
     });
 
-    // Automatically remove focus to hide the keyboard
-    document.getElementById('searchInput').blur();
+    // Delay hiding the keyboard to make sure all events are handled
+    setTimeout(() => {
+        // Automatically remove focus to hide the keyboard
+        document.getElementById('searchInput').blur();
+    }, 200); // A short delay of 200ms should be sufficient
 }
 
-document.getElementById('searchInput').addEventListener('keypress', function (event) {
-    if (event.key === 'Enter') {
-        event.preventDefault(); // Prevent default form submission or behavior
+
+// Hide keyboard on touch after search is completed
+document.getElementById('searchInput').addEventListener('touchend', function (event) {
+    if (event.key === 'Enter' || event.type === 'touchend') {
         searchMenu(); // Trigger the search
         document.getElementById('searchInput').blur(); // Hide the keyboard
     }
