@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weligama Rotti Shop</title>
     <link rel="stylesheet" href="styles.css">
-</head>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"></head>
 <body>
     <header>
         <h1>Weligama Rotti Shop</h1>
@@ -16,11 +16,11 @@
         <section class="horizontal-filter-bar">
             <div id="filterBar">
                 <button class="filter-button active" data-filter="all" onclick="filterMenu('all')">All</button>
-                <button class="filter-button" data-filter="Rotti" onclick="filterMenu('Grill')">Rotti</button>
-                <button class="filter-button" data-filter="Noodles" onclick="filterMenu('Pasta')">Noodles</button>
-                <button class="filter-button" data-filter="Fried_Rice" onclick="filterMenu('Sushi')">Fried Rice</button>
-                <button class="filter-button" data-filter="Tea_and_Coffee" onclick="filterMenu('Sushi')">Tea & Coffee</button>
-                <button class="filter-button" data-filter="Juice" onclick="filterMenu('Sushi')">Juice</button>                
+                <button class="filter-button" data-filter="Rotti" onclick="filterMenu('Rotti')">Rotti</button>
+                <button class="filter-button" data-filter="Noodles" onclick="filterMenu('Noodles')">Noodles</button>
+                <button class="filter-button" data-filter="Fried_Rice" onclick="filterMenu('Fried_Rice')">Fried Rice</button>
+                <button class="filter-button" data-filter="Tea_and_Coffee" onclick="filterMenu('Tea_and_Coffee')">Tea & Coffee</button>
+                <button class="filter-button" data-filter="Juice" onclick="filterMenu('Juice')">Juice</button>                
             </div>
         </section>
 
@@ -44,10 +44,46 @@
                     <p>USD 15</p>
                 </div>
 
-                <div class="menu-card" data-category="Fried_Rice" onclick="openModal('Sushi Rolls', 'Freshly made sushi rolls with salmon and avocado', 'USD 20', 'images/sushi-rolls.jpg')">
-                    <img src="images/sushi-rolls.jpg" alt="Sushi Rolls">
+                <div class="menu-card" data-category="Fried_Rice" onclick="openModal('Sushi Rolls', 'Freshly made sushi rolls with salmon and avocado', 'USD 20', 'assert/img1.jpg')">
+                    <img src="assert/img1.jpg" alt="Sushi Rolls">
                     <h3>Sushi Rolls</h3>
                     <p>USD 20</p>
+                </div>
+
+                <div class="menu-card" data-category="Rotti" onclick="openModal('Grilled Chicken', 'Tender grilled chicken served with roasted vegetables', 'USD 12', 'assert/img1.jpg')">
+                    <img src="assert/img1.jpg" alt="Grilled Chicken">
+                    <h3>Grilled Chicken</h3>
+                    <p>USD 12</p>
+                </div>
+
+                <div class="menu-card" data-category="Noodles" onclick="openModal('Pasta Carbonara', 'Creamy pasta with pancetta and parmesan', 'USD 15', 'assert/rice.jpg')">
+                    <img src="assert/rice.jpg" alt="Pasta Carbonara">
+                    <h3>Pasta Carbonara</h3>
+                    <p>USD 15</p>
+                </div>
+
+                <div class="menu-card" data-category="Rotti" onclick="openModal('Grilled Chicken', 'Tender grilled chicken served with roasted vegetables', 'USD 12', 'assert/img1.jpg')">
+                    <img src="assert/img1.jpg" alt="Grilled Chicken">
+                    <h3>Grilled Chicken</h3>
+                    <p>USD 12</p>
+                </div>
+
+                <div class="menu-card" data-category="Noodles" onclick="openModal('Pasta Carbonara', 'Creamy pasta with pancetta and parmesan', 'USD 15', 'assert/rice.jpg')">
+                    <img src="assert/rice.jpg" alt="Pasta Carbonara">
+                    <h3>Pasta Carbonara</h3>
+                    <p>USD 15</p>
+                </div>
+
+                <div class="menu-card" data-category="Rotti" onclick="openModal('Grilled Chicken', 'Tender grilled chicken served with roasted vegetables', 'USD 12', 'assert/img1.jpg')">
+                    <img src="assert/img1.jpg" alt="Grilled Chicken">
+                    <h3>Grilled Chicken</h3>
+                    <p>USD 12</p>
+                </div>
+
+                <div class="menu-card" data-category="Noodles" onclick="openModal('Pasta Carbonara', 'Creamy pasta with pancetta and parmesan', 'USD 15', 'assert/rice.jpg')">
+                    <img src="assert/rice.jpg" alt="Pasta Carbonara">
+                    <h3>Pasta Carbonara</h3>
+                    <p>USD 15</p>
                 </div>
             </div>
         </section>
