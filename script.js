@@ -47,7 +47,30 @@ function filterMenu(category) {
     });
 }
 
-// Search Menu
+// // Search Menu
+// function searchMenu() {
+//     const searchValue = document.getElementById('searchInput').value.toLowerCase();
+//     const category = document.querySelector('.filter-button.active').getAttribute('data-filter');
+//     const cards = document.querySelectorAll('.menu-card');
+
+//     // Filter the cards based on the active category and search term
+//     cards.forEach(card => {
+//         const cardCategory = card.getAttribute('data-category');
+//         const cardTitle = card.querySelector('h3').textContent.toLowerCase();
+
+//         if ((category === 'all' || cardCategory === category) && cardTitle.includes(searchValue)) {
+//             card.style.display = 'block';
+//         } else {
+//             card.style.display = 'none';
+//         }
+//     });
+
+//     // Automatically remove focus to hide the keyboard
+//     document.getElementById('searchInput').blur();
+// }
+
+
+
 function searchMenu() {
     const searchValue = document.getElementById('searchInput').value.toLowerCase();
     const category = document.querySelector('.filter-button.active').getAttribute('data-filter');
@@ -64,4 +87,17 @@ function searchMenu() {
             card.style.display = 'none';
         }
     });
+
+    // Automatically remove focus to hide the keyboard
+    document.getElementById('searchInput').blur();
 }
+
+document.getElementById('searchInput').addEventListener('keypress', function (event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Prevent default form submission or behavior
+        searchMenu(); // Trigger the search
+        document.getElementById('searchInput').blur(); // Hide the keyboard
+    }
+});
+
+
