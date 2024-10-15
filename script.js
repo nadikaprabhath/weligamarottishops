@@ -93,7 +93,7 @@ function searchMenu() {
     setTimeout(() => {
         // Automatically remove focus to hide the keyboard
         document.getElementById('searchInput').blur();
-    }, 500); // A short delay of 200ms should be sufficient
+    }, 900); // A short delay of 200ms should be sufficient
 }
 
 
