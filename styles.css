@@ -127,7 +127,7 @@ h2 {
     gap: 20px;
     justify-content: center;
     max-width: 1400px;
-    /* margin:0 auto;  */
+    margin:0 auto; 
 }
 
 .menu-card {
