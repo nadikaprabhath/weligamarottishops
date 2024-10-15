@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurant Menu</title>
+    <title>Weligama Rotti Shop</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Restaurant Menu</h1>
+        <h1>Weligama Rotti Shop</h1>
     </header>
 
     <main>
@@ -16,9 +16,11 @@
         <section class="horizontal-filter-bar">
             <div id="filterBar">
                 <button class="filter-button active" data-filter="all" onclick="filterMenu('all')">All</button>
-                <button class="filter-button" data-filter="Grill" onclick="filterMenu('Grill')">Grill</button>
-                <button class="filter-button" data-filter="Pasta" onclick="filterMenu('Pasta')">Pasta</button>
-                <button class="filter-button" data-filter="Sushi" onclick="filterMenu('Sushi')">Sushi</button>
+                <button class="filter-button" data-filter="Rotti" onclick="filterMenu('Grill')">Rotti</button>
+                <button class="filter-button" data-filter="Noodles" onclick="filterMenu('Pasta')">Noodles</button>
+                <button class="filter-button" data-filter="Fried_Rice" onclick="filterMenu('Sushi')">Fried Rice</button>
+                <button class="filter-button" data-filter="Tea_and_Coffee" onclick="filterMenu('Sushi')">Tea & Coffee</button>
+                <button class="filter-button" data-filter="Juice" onclick="filterMenu('Sushi')">Juice</button>                
             </div>
         </section>
 
@@ -28,21 +30,21 @@
         </section>
 
         <section id="menu">
-            <h2>Our Menu</h2>
+            <h2>Menu</h2>
             <div class="menu-container" id="menuContainer">
-                <div class="menu-card" data-category="Grill" onclick="openModal('Grilled Chicken', 'Tender grilled chicken served with roasted vegetables', 'USD 12', 'images/grilled-chicken.jpg')">
-                    <img src="images/grilled-chicken.jpg" alt="Grilled Chicken">
+                <div class="menu-card" data-category="Rotti" onclick="openModal('Grilled Chicken', 'Tender grilled chicken served with roasted vegetables', 'USD 12', 'assert/img1.jpg')">
+                    <img src="assert/img1.jpg" alt="Grilled Chicken">
                     <h3>Grilled Chicken</h3>
                     <p>USD 12</p>
                 </div>
 
-                <div class="menu-card" data-category="Pasta" onclick="openModal('Pasta Carbonara', 'Creamy pasta with pancetta and parmesan', 'USD 15', 'images/pasta-carbonara.jpg')">
-                    <img src="images/pasta-carbonara.jpg" alt="Pasta Carbonara">
+                <div class="menu-card" data-category="Noodles" onclick="openModal('Pasta Carbonara', 'Creamy pasta with pancetta and parmesan', 'USD 15', 'assert/rice.jpg')">
+                    <img src="assert/rice.jpg" alt="Pasta Carbonara">
                     <h3>Pasta Carbonara</h3>
                     <p>USD 15</p>
                 </div>
 
-                <div class="menu-card" data-category="Sushi" onclick="openModal('Sushi Rolls', 'Freshly made sushi rolls with salmon and avocado', 'USD 20', 'images/sushi-rolls.jpg')">
+                <div class="menu-card" data-category="Fried_Rice" onclick="openModal('Sushi Rolls', 'Freshly made sushi rolls with salmon and avocado', 'USD 20', 'images/sushi-rolls.jpg')">
                     <img src="images/sushi-rolls.jpg" alt="Sushi Rolls">
                     <h3>Sushi Rolls</h3>
                     <p>USD 20</p>
@@ -64,7 +66,7 @@
     </div>
 
     <footer>
-        <p>© 2024 Restaurant Name. All Rights Reserved.</p>
+        <p>© 2024 Weligama Rotti Shop. All Rights Reserved.</p>
     </footer>
 
     <script src="script.js"></script>
