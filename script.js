@@ -93,16 +93,16 @@ function searchMenu() {
     setTimeout(() => {
         // Automatically remove focus to hide the keyboard
         document.getElementById('searchInput').blur();
-    }, 500); // A short delay of 200ms should be sufficient
+    }, 200); // A short delay of 200ms should be sufficient
 }
 
 
-// Hide keyboard on touch after search is completed
-document.getElementById('searchInput').addEventListener('touchend', function (event) {
-    if (event.key === 'Enter' || event.type === 'touchend') {
-        searchMenu(); // Trigger the search
-        document.getElementById('searchInput').blur(); // Hide the keyboard
-    }
-});
+// // Hide keyboard on touch after search is completed
+// document.getElementById('searchInput').addEventListener('touchend', function (event) {
+//     if (event.key === 'Enter' || event.type === 'touchend') {
+//         searchMenu(); // Trigger the search
+//         document.getElementById('searchInput').blur(); // Hide the keyboard
+//     }
+// });
 
 
