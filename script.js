@@ -47,37 +47,13 @@ function filterMenu(category) {
     });
 }
 
-// // Search Menu
-// function searchMenu() {
-//     const searchValue = document.getElementById('searchInput').value.toLowerCase();
-//     const category = document.querySelector('.filter-button.active').getAttribute('data-filter');
-//     const cards = document.querySelectorAll('.menu-card');
-
-//     // Filter the cards based on the active category and search term
-//     cards.forEach(card => {
-//         const cardCategory = card.getAttribute('data-category');
-//         const cardTitle = card.querySelector('h3').textContent.toLowerCase();
-
-//         if ((category === 'all' || cardCategory === category) && cardTitle.includes(searchValue)) {
-//             card.style.display = 'block';
-//         } else {
-//             card.style.display = 'none';
-//         }
-//     });
-
-//     // Automatically remove focus to hide the keyboard
-//     document.getElementById('searchInput').blur();
-// }
-
-
-
-
-
+// Search Menu
 function searchMenu() {
     const searchValue = document.getElementById('searchInput').value.toLowerCase();
     const category = document.querySelector('.filter-button.active').getAttribute('data-filter');
     const cards = document.querySelectorAll('.menu-card');
 
+    // Filter the cards based on the active category and search term
     cards.forEach(card => {
         const cardCategory = card.getAttribute('data-category');
         const cardTitle = card.querySelector('h3').textContent.toLowerCase();
@@ -89,20 +65,39 @@ function searchMenu() {
         }
     });
 
-    // Delay hiding the keyboard to make sure all events are handled
-    setTimeout(() => {
-        // Automatically remove focus to hide the keyboard
-        document.getElementById('searchInput').blur();
-    }, 200); // A short delay of 200ms should be sufficient
+    // Automatically remove focus to hide the keyboard
+    document.getElementById('searchInput').blur();
 }
 
 
-// Hide keyboard on touch after search is completed
-document.getElementById('searchInput').addEventListener('touchend', function (event) {
-    if (event.key === 'Enter' || event.type === 'touchend') {
-        searchMenu(); // Trigger the search
-        document.getElementById('searchInput').blur(); // Hide the keyboard
-    }
-});
+// Fetch the menu data from a JSON file
+fetch('menu-data.json')
+    .then(response => response.json())  // Parse the JSON data
+    .then(data => {
+        // Get the menu container where we will add the menu cards
+        const menuContainer = document.getElementById('menuContainer');
+
+        // Loop through each item in the data
+        data.forEach(item => {
+            // Create a new div element for each menu item
+            const card = document.createElement('div');
+            card.classList.add('menu-card');  // Add the 'menu-card' class to the div
+            card.setAttribute('data-category', item.category);  // Add a data-category attribute for filtering
+
+            // Set the inner HTML of the card
+            card.innerHTML = `
+                <img src="${item.image}" alt="${item.name}">
+                <h3>${item.name}</h3>
+                <p>${item.price}</p>
+            `;
+
+            // Add an onclick event to open a modal with the item details
+            card.setAttribute('onclick', `openModal('${item.name}', '${item.description}', '${item.price}', '${item.image}')`);
+
+            // Append the card to the menu container
+            menuContainer.appendChild(card);
+        });
+    })
+    .catch(error => console.error('Error fetching menu data:', error));  // Handle any errors
 
 

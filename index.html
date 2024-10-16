@@ -33,41 +33,7 @@
         <section id="menu">
             <h2>Menu</h2>
             <div class="menu-container" id="menuContainer"></div>
-        <script>
-            // Fetch the menu data from the JSON file
-            fetch('menu-data.json')
-                .then(response => response.json())
-                .then(data => {
-                    const menuContainer = document.getElementById('menuContainer');
-                    data.forEach(item => {
-                        // Create a new menu card
-                        const card = document.createElement('div');
-                        card.classList.add('menu-card');
-                        card.setAttribute('data-category', item.category);
-
-                        // Set the HTML content of the card
-                        card.innerHTML = `
-                            <img src="${item.image}" alt="${item.name}">
-                            <h3>${item.name}</h3>
-                            <p>${item.price}</p>
-                        `;
-                        // Add onclick functionality to open a modal (assuming you have a modal function)
-                        card.setAttribute('onclick', `openModal('${item.name}', '${item.description}', '${item.price}', '${item.image}')`);
-
-                        // Append the card to the menu container
-                        menuContainer.appendChild(card);
-                    });
-                })
-                .catch(error => console.error('Error fetching menu data:', error));
-
-            // Example modal opening function (implement the modal as per your requirement)
-            function openModal(name, description, price, image) {
-                // Show modal with the details
-                console.log("Modal content:", name, description, price, image);
-                // You can add code here to display the modal with the item details
-            }
-        </script>
-        </section>
+            </section>
     </main>
     <!-- Modal Structure -->
     <div id="modal" class="modal">
