@@ -108,7 +108,7 @@ h2 {
 }
     
 .search-bar input:focus {
-    border-color: #ff5100;
+    border-color: #a3481e;
 }
     
 
@@ -190,7 +190,7 @@ h2 {
 }
 
 /* Modal Styles */
-.modal {
+/* .modal {
     display: none;
     position: fixed;
     z-index: 1000;
@@ -220,7 +220,84 @@ h2 {
     object-fit: cover;
     margin-bottom: 20px;
     border-radius: 12px;
+} */
+
+/* Modal overlay */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6); /* Slightly transparent black background */
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto; /* Enable scrolling if the content is too tall for the screen */
+    padding: 20px;
+    box-sizing: border-box; /* Ensure padding is considered in the width */
 }
+
+/* Modal content container */
+.modal-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    max-width: 450px; /* Reduce the max width for better fit on smaller screens */
+    width: 100%;
+    margin: 20px auto; /* Center the modal with margin */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 0.3s ease; /* Add a subtle animation for smoother appearance */
+    box-sizing: border-box; /* Account for padding inside the element */
+}
+
+/* Modal image */
+.modal img {
+    width: 100%;
+    height: auto; /* Ensure the height scales proportionally with the width */
+    object-fit: cover;
+    margin-bottom: 15px;
+    border-radius: 10px;
+}
+
+/* Modal content text */
+.modal h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.modal p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Close button */
+.modal .close-btn {
+    padding: 10px 20px;
+    background-color: #ff5100;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+    max-width: 200px; /* Button stays small and centered */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.modal .close-btn:hover {
+    background-color: #e04b00;
+}
+
+/*  */
+
 
 .close {
     position: absolute;
@@ -279,27 +356,43 @@ footer p {
     margin: 0;
 }
 
+.menu-card {
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* Add a fade-in animation for the modal */
 @keyframes fadeIn {
     from {
         opacity: 0;
-        transform: translateY(20px);
+        transform: scale(0.95);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: scale(1);
     }
 }
 
-.menu-card {
-    animation: fadeIn 0.6s ease-in-out;
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .modal-content {
+        max-width: 90%; /* Ensure the modal doesn't take up the entire width */
+    }
+    .modal img {
+        height: auto; /* Ensure images scale properly on smaller screens */
+    }
+    .modal h2 {
+        font-size: 1.25rem; /* Adjust the heading size for small screens */
+    }
+    .modal p {
+        font-size: 0.9rem; /* Smaller text on mobile */
+    }
 }
 
 /* Responsive Styles */
 @media (max-width: 768px) {
     .menu-card {
-        width: 100%;
+        width: 90%;
     }
-
     .search-bar input {
         width: 90%;
     }
@@ -309,11 +402,9 @@ footer p {
     h2 {
         font-size: 28px;
     }
-
     .menu-card img {
         height: 180px;
     }
-
     .modal-content img {
         height: 220px;
     }
