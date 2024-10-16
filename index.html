@@ -7,13 +7,12 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
+    
 </head>
 <body>
     <header>
         <h1>Weligama Rotti Shop</h1>
     </header>
-
     <main>
         <!-- Horizontal Food Name Filter -->
         <section class="horizontal-filter-bar">
@@ -26,72 +25,50 @@
                 <button class="filter-button" data-filter="Juice" onclick="filterMenu('Juice')">Juice</button>                
             </div>
         </section>
-
         <!-- Search Bar -->
         <section class="search-bar">
             <input type="text" id="searchInput" onkeyup="searchMenu()" placeholder="Search for menu items...">
         </section>
-
+        <!-- Menu card -->
         <section id="menu">
             <h2>Menu</h2>
-            <div class="menu-container" id="menuContainer">
-                <div class="menu-card" data-category="Rotti" onclick="openModal('Grilled Chicken', 'Tender grilled chicken served with roasted vegetables', 'USD 12', 'assert/img1.jpg')">
-                    <img src="assert/img1.jpg" alt="Grilled Chicken">
-                    <h3>Grilled Chicken</h3>
-                    <p>USD 12</p>
-                </div>
+            <div class="menu-container" id="menuContainer"></div>
+        <script>
+            // Fetch the menu data from the JSON file
+            fetch('menu-data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const menuContainer = document.getElementById('menuContainer');
+                    data.forEach(item => {
+                        // Create a new menu card
+                        const card = document.createElement('div');
+                        card.classList.add('menu-card');
+                        card.setAttribute('data-category', item.category);
 
-                <div class="menu-card" data-category="Noodles" onclick="openModal('Pasta Carbonara', 'Creamy pasta with pancetta and parmesan', 'USD 15', 'assert/rice.jpg')">
-                    <img src="assert/rice.jpg" alt="Pasta Carbonara">
-                    <h3>Pasta Carbonara</h3>
-                    <p>USD 15</p>
-                </div>
+                        // Set the HTML content of the card
+                        card.innerHTML = `
+                            <img src="${item.image}" alt="${item.name}">
+                            <h3>${item.name}</h3>
+                            <p>${item.price}</p>
+                        `;
+                        // Add onclick functionality to open a modal (assuming you have a modal function)
+                        card.setAttribute('onclick', `openModal('${item.name}', '${item.description}', '${item.price}', '${item.image}')`);
 
-                <div class="menu-card" data-category="Fried_Rice" onclick="openModal('Sushi Rolls', 'Freshly made sushi rolls with salmon and avocado', 'USD 20', 'assert/img1.jpg')">
-                    <img src="assert/img1.jpg" alt="Sushi Rolls">
-                    <h3>Sushi Rolls</h3>
-                    <p>USD 20</p>
-                </div>
+                        // Append the card to the menu container
+                        menuContainer.appendChild(card);
+                    });
+                })
+                .catch(error => console.error('Error fetching menu data:', error));
 
-                <div class="menu-card" data-category="Rotti" onclick="openModal('Grilled Chicken', 'Tender grilled chicken served with roasted vegetables', 'USD 12', 'assert/img1.jpg')">
-                    <img src="assert/img1.jpg" alt="Grilled Chicken">
-                    <h3>Grilled Chicken</h3>
-                    <p>USD 12</p>
-                </div>
-
-                <div class="menu-card" data-category="Noodles" onclick="openModal('Pasta Carbonara', 'Creamy pasta with pancetta and parmesan', 'USD 15', 'assert/rice.jpg')">
-                    <img src="assert/rice.jpg" alt="Pasta Carbonara">
-                    <h3>Pasta Carbonara</h3>
-                    <p>USD 15</p>
-                </div>
-
-                <div class="menu-card" data-category="Rotti" onclick="openModal('Grilled Chicken', 'Tender grilled chicken served with roasted vegetables', 'USD 12', 'assert/img1.jpg')">
-                    <img src="assert/img1.jpg" alt="Grilled Chicken">
-                    <h3>Grilled Chicken</h3>
-                    <p>USD 12</p>
-                </div>
-
-                <div class="menu-card" data-category="Noodles" onclick="openModal('Pasta Carbonara', 'Creamy pasta with pancetta and parmesan', 'USD 15', 'assert/rice.jpg')">
-                    <img src="assert/rice.jpg" alt="Pasta Carbonara">
-                    <h3>Pasta Carbonara</h3>
-                    <p>USD 15</p>
-                </div>
-
-                <div class="menu-card" data-category="Rotti" onclick="openModal('Grilled Chicken', 'Tender grilled chicken served with roasted vegetables', 'USD 12', 'assert/img1.jpg')">
-                    <img src="assert/img1.jpg" alt="Grilled Chicken">
-                    <h3>Grilled Chicken</h3>
-                    <p>USD 12</p>
-                </div>
-
-                <div class="menu-card" data-category="Noodles" onclick="openModal('Pasta Carbonara', 'Creamy pasta with pancetta and parmesan', 'USD 15', 'assert/rice.jpg')">
-                    <img src="assert/rice.jpg" alt="Pasta Carbonara">
-                    <h3>Pasta Carbonara</h3>
-                    <p>USD 15</p>
-                </div>
-            </div>
+            // Example modal opening function (implement the modal as per your requirement)
+            function openModal(name, description, price, image) {
+                // Show modal with the details
+                console.log("Modal content:", name, description, price, image);
+                // You can add code here to display the modal with the item details
+            }
+        </script>
         </section>
     </main>
-
     <!-- Modal Structure -->
     <div id="modal" class="modal">
         <div class="modal-content">

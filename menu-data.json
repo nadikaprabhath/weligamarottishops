@@ -1,0 +1,30 @@
+[
+    {
+        "category": "Rotti",
+        "name": "Grilled ChickenGrilled Chicken",
+        "description": "Tender grilled chicken served with roasted vegetables",
+        "price": "USD 12",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Rotti",
+        "name": "Veggie Rotti",
+        "description": "Fresh veggies wrapped in a crispy rotti",
+        "price": "USD 10",
+        "image": "assert/rice.jpg"
+    },
+    {
+        "category": "Pizza",
+        "name": "Pepperoni Pizza",
+        "description": "Delicious pepperoni pizza with extra cheese",
+        "price": "USD 15",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Pizza",
+        "name": "Pepperoni Pizza",
+        "description": "Delicious pepperoni pizza with extra cheese",
+        "price": "USD 15",
+        "image": "assert/img1.jpg"
+    }
+]
