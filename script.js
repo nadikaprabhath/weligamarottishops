@@ -92,7 +92,7 @@ function searchMenu() {
     // Delay hiding the keyboard to make sure all events are handled
     // setTimeout(() => {
         // Automatically remove focus to hide the keyboard
-        document.getElementById('searchInput').blur();
+        // document.getElementById('searchInput').blur();
     // }, 900); // A short delay of 200ms should be sufficient
 }
 
