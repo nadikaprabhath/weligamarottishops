@@ -416,7 +416,7 @@ footer p {
     }
 }
 
-@media (max-width: 414px) {
+@media (max-width: 430px) {
     header {
         font-size: 0.5rem;
     }

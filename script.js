@@ -64,11 +64,7 @@ function searchMenu() {
             card.style.display = 'none';
         }
     });
-
-    // Automatically remove focus to hide the keyboard
-    document.getElementById('searchInput').blur();
 }
-
 
 // Fetch the menu data from a JSON file
 fetch('menu-data.json')

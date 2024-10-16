@@ -1,219 +1,282 @@
 [
     {
         "category": "Rotti",
-        "name": "Grilled ChickenGrilled Chicken",
-        "description": "Tender grilled chicken served with roasted vegetables",
-        "price": "USD 12",
+        "name": "",
+        "description": "",
+        "price": "LKR ",
         "image": "assert/img1.jpg"
     },
     {
         "category": "Rotti",
-        "name": "Veggie Rotti",
-        "description": "Fresh veggies wrapped in a crispy rotti",
-        "price": "USD 10",
-        "image": "assert/rice.jpg"
-    },
-    {
-        "category": "Noodles",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
-        "image": "assert/img1.jpg"
-    },
-    {
-        "category": "Juice",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
+        "name": "Calamari Cheese Rotti",
+        "description": "",
+        "price": "LKR 1400",
         "image": "assert/img1.jpg"
     },
     {
         "category": "Rotti",
-        "name": "Veggie Rotti",
-        "description": "Fresh veggies wrapped in a crispy rotti",
-        "price": "USD 10",
-        "image": "assert/rice.jpg"
-    },
-    {
-        "category": "Noodles",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
-        "image": "assert/img1.jpg"
-    },
-    {
-        "category": "Juice",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
+        "name": "Calamari Vegetable Rotti",
+        "description": "",
+        "price": "LKR 1350",
         "image": "assert/img1.jpg"
     },
     {
         "category": "Rotti",
-        "name": "Veggie Rotti",
-        "description": "Fresh veggies wrapped in a crispy rotti",
-        "price": "USD 10",
-        "image": "assert/rice.jpg"
-    },
-    {
-        "category": "Noodles",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
-        "image": "assert/img1.jpg"
-    },
-    {
-        "category": "Juice",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
+        "name": "Calamari Vegetable With Cheese Rotti",
+        "description": "",
+        "price": "LKR 1500",
         "image": "assert/img1.jpg"
     },
     {
         "category": "Rotti",
-        "name": "Veggie Rotti",
-        "description": "Fresh veggies wrapped in a crispy rotti",
-        "price": "USD 10",
-        "image": "assert/rice.jpg"
-    },
-    {
-        "category": "Noodles",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
-        "image": "assert/img1.jpg"
-    },
-    {
-        "category": "Juice",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
+        "name": "Calamari Cheese With Vegetable Rotti",
+        "description": "",
+        "price": "LKR 1700",
         "image": "assert/img1.jpg"
     },
     {
         "category": "Rotti",
-        "name": "Veggie Rotti",
-        "description": "Fresh veggies wrapped in a crispy rotti",
-        "price": "USD 10",
-        "image": "assert/rice.jpg"
-    },
-    {
-        "category": "Noodles",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
-        "image": "assert/img1.jpg"
-    },
-    {
-        "category": "Juice",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
+        "name": "Calamari Egg Vegetable Rotti",
+        "description": "",
+        "price": "LKR 1700",
         "image": "assert/img1.jpg"
     },
     {
         "category": "Rotti",
-        "name": "Veggie Rotti",
-        "description": "Fresh veggies wrapped in a crispy rotti",
-        "price": "USD 10",
-        "image": "assert/rice.jpg"
-    },
-    {
-        "category": "Noodles",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
-        "image": "assert/img1.jpg"
-    },
-    {
-        "category": "Juice",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
+        "name": "Calamari Cheese Onion Rotti",
+        "description": "",
+        "price": "LKR 1500",
         "image": "assert/img1.jpg"
     },
     {
         "category": "Rotti",
-        "name": "Veggie Rotti",
-        "description": "Fresh veggies wrapped in a crispy rotti",
-        "price": "USD 10",
-        "image": "assert/rice.jpg"
+        "name": "Calamari Tomato Onion With Cheese Rotti",
+        "description": "",
+        "price": "LKR 1950",
+        "image": "assert/img1.jpg"
     },
     {
         "category": "Noodles",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
+        "name": "Vegetable Noodles",
+        "description": "",
+        "price": "LKR 900",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Noodles",
+        "name": "Egg Noodles",
+        "description": "",
+        "price": "LKR 980",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Noodles",
+        "name": "Chicken Noodles",
+        "description": "",
+        "price": "LKR 1100",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Noodles",
+        "name": "Fish Noodles",
+        "description": "",
+        "price": "LKR 1100",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Noodles",
+        "name": "Prown Noodles",
+        "description": "",
+        "price": "LKR 1500",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Noodles",
+        "name": "Calamari Noodles",
+        "description": "",
+        "price": "LKR 1500",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Noodles",
+        "name": "Mixed Noodles",
+        "description": "",
+        "price": "LKR 1800",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Noodles",
+        "name": "Seafood Noodles",
+        "description": "",
+        "price": "LKR 1750",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Fried_Rice",
+        "name": "Vegetable Fried Rice",
+        "description": "",
+        "price": "LKR 800",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Fried_Rice",
+        "name": "Egg Fried Rice",
+        "description": "",
+        "price": "LKR 980",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Fried_Rice",
+        "name": "Chicken Fried Rice",
+        "description": "",
+        "price": "LKR 1000",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Fried_Rice",
+        "name": "Fish Fried Rice",
+        "description": "",
+        "price": "LKR 1000",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Fried_Rice",
+        "name": "Prown Fried Rice",
+        "description": "",
+        "price": "LKR 1500",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Fried_Rice",
+        "name": "Calamarl Fried Rice",
+        "description": "",
+        "price": "LKR 1500",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Fried_Rice",
+        "name": "Mixed Fried Rice",
+        "description": "",
+        "price": "LKR 1800",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Fried_Rice",
+        "name": "SeanFood Fried Rice",
+        "description": "",
+        "price": "LKR 1700",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Fried_Rice",
+        "name": "Pineapple Fried Rice",
+        "description": "",
+        "price": "LKR 1400",
+        "image": "assert/img1.jpg"
+    },    
+    {
+        "category": "Tea_and_Coffee",
+        "name": "Black Tea Pot",
+        "description": "With Milk LKR 1300",
+        "price": "LKR 1000",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Tea_and_Coffee",
+        "name": "Black Tea Cup",
+        "description": "",
+        "price": "LKR 200",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Tea_and_Coffee",
+        "name": "Black Coffee Cup",
+        "description": "",
+        "price": "LKR 200",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Tea_and_Coffee",
+        "name": "Milk Tea Cup",
+        "description": "",
+        "price": "LKR 300",
         "image": "assert/img1.jpg"
     },
     {
         "category": "Juice",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
-        "image": "assert/img1.jpg"
-    },
-    {
-        "category": "Rotti",
-        "name": "Veggie Rotti",
-        "description": "Fresh veggies wrapped in a crispy rotti",
-        "price": "USD 10",
-        "image": "assert/rice.jpg"
-    },
-    {
-        "category": "Noodles",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
+        "name": "Mixed Fruit Juice",
+        "description": "With Ice Cream LKR 1300",
+        "price": "LKR 1000",
         "image": "assert/img1.jpg"
     },
     {
         "category": "Juice",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
-        "image": "assert/img1.jpg"
-    },
-    {
-        "category": "Rotti",
-        "name": "Veggie Rotti",
-        "description": "Fresh veggies wrapped in a crispy rotti",
-        "price": "USD 10",
+        "name": "Mango Juice",
+        "description": "With Ice Cream LKR 1300",
+        "price": "LKR 900",
         "image": "assert/rice.jpg"
     },
     {
-        "category": "Noodles",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
+        "category": "Juice",
+        "name": "Lime Juice",
+        "description": "With Ice Cream LKR 1300",
+        "price": "LKR 650",
         "image": "assert/img1.jpg"
     },
     {
         "category": "Juice",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
-        "image": "assert/img1.jpg"
-    },
-    {
-        "category": "Rotti",
-        "name": "Veggie Rotti",
-        "description": "Fresh veggies wrapped in a crispy rotti",
-        "price": "USD 10",
-        "image": "assert/rice.jpg"
-    },
-    {
-        "category": "Noodles",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
+        "name": "Banana Juice",
+        "description": "With Ice Cream LKR 1300",
+        "price": "LKR 650",
         "image": "assert/img1.jpg"
     },
     {
         "category": "Juice",
-        "name": "Pepperoni Pizza",
-        "description": "Delicious pepperoni pizza with extra cheese",
-        "price": "USD 15",
+        "name": "Avocado Juice",
+        "description": "With Ice Cream LKR 1300",
+        "price": "LKR 900",
+        "image": "assert/rice.jpg"
+    },
+    {
+        "category": "Juice",
+        "name": "Orangr Juice",
+        "description": "With Ice Cream LKR 1300",
+        "price": "LKR 900",
         "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Juice",
+        "name": "Wood Apple Juice",
+        "description": "With Ice Cream LKR 1300",
+        "price": "LKR 700",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Juice",
+        "name": "Water Melon Jiuce",
+        "description": "With Ice Cream LKR 1300",
+        "price": "LKR 700",
+        "image": "assert/rice.jpg"
+    },
+    {
+        "category": "Juice",
+        "name": "Papaya Juice",
+        "description": "With Ice Cream LKR 1300",
+        "price": "LKR 650",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Juice",
+        "name": "Pineapple Juice",
+        "description": "With Ice Cream LKR 1300",
+        "price": "LKR 850",
+        "image": "assert/img1.jpg"
+    },
+    {
+        "category": "Juice",
+        "name": "Coconut Juice",
+        "description": "With Ice Cream LKR 1300",
+        "price": "LKR 500",
+        "image": "assert/rice.jpg"
     }
 ]
