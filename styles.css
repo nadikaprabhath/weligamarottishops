@@ -395,3 +395,20 @@ footer p {
         font-size: 0.4rem;
     }
 }
+
+
+@media screen and (max-width: 768px) {
+    header {
+      padding: 10px 15px;
+      text-align: left;
+    }
+  }
+  
+  /* Smaller mobile screens (e.g., phones in portrait mode) */
+  @media screen and (max-width: 480px) {
+    header {
+      padding: 8px 12px;
+      font-size: 14px;
+      text-align: left;
+    }
+  }
