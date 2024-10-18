@@ -77,9 +77,30 @@ function filterMenu(category) {
 
 
 // Search Menu
+// function searchMenu() {
+//     const searchValue = document.getElementById('searchInput').value.toLowerCase();
+//     const category = document.querySelector('.filter-button.active').getAttribute('data-filter');
+//     const cards = document.querySelectorAll('.menu-card');
+
+//     // Filter the cards based on the active category and search term
+//     cards.forEach(card => {
+//         const cardCategory = card.getAttribute('data-category');
+//         const cardTitle = card.querySelector('h3').textContent.toLowerCase();
+
+//         if ((category === 'all' || cardCategory === category) && cardTitle.includes(searchValue)) {
+//             card.style.display = 'block';
+//         } else {
+//             card.style.display = 'none';
+//         }
+//     });
+// }
+
+
+// Search Menu
 function searchMenu() {
     const searchValue = document.getElementById('searchInput').value.toLowerCase();
-    const category = document.querySelector('.filter-button.active').getAttribute('data-filter');
+    const activeCategoryButton = document.querySelector('.filter-button.active');
+    const category = activeCategoryButton ? activeCategoryButton.getAttribute('data-filter') : 'all';  // Default to 'all' if no active button
     const cards = document.querySelectorAll('.menu-card');
 
     // Filter the cards based on the active category and search term
@@ -95,7 +116,14 @@ function searchMenu() {
     });
 }
 
-
+// Add event listener to reset category when search bar is focused (if needed)
+document.getElementById('searchInput').addEventListener('focus', function() {
+    const activeCategoryButton = document.querySelector('.filter-button.active');
+    if (activeCategoryButton && activeCategoryButton.getAttribute('data-filter') !== 'all') {
+        // Optional: If you want to reset to 'all' when focusing the search field
+        filterMenu('all');
+    }
+});
 
 // 1
 // // Fetch the menu data from a JSON file
