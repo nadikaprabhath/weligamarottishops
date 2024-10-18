@@ -66,6 +66,38 @@ function searchMenu() {
     });
 }
 
+// 1
+// // Fetch the menu data from a JSON file
+// fetch('menu-data.json')
+//     .then(response => response.json())  // Parse the JSON data
+//     .then(data => {
+//         // Get the menu container where we will add the menu cards
+//         const menuContainer = document.getElementById('menuContainer');
+
+//         // Loop through each item in the data
+//         data.forEach(item => {
+//             // Create a new div element for each menu item
+//             const card = document.createElement('div');
+//             card.classList.add('menu-card');  // Add the 'menu-card' class to the div
+//             card.setAttribute('data-category', item.category);  // Add a data-category attribute for filtering
+
+//             // Set the inner HTML of the card
+//             card.innerHTML = `
+//                 <img src="${item.image}" alt="${item.name}">
+//                 <h3>${item.name}</h3>
+//                 <p>${item.price}</p>
+//             `;
+
+//             // Add an onclick event to open a modal with the item details
+//             card.setAttribute('onclick', `openModal('${item.name}', '${item.description}', '${item.price}', '${item.image}')`);
+
+//             // Append the card to the menu container
+//             menuContainer.appendChild(card);
+//         });
+//     })
+//     .catch(error => console.error('Error fetching menu data:', error));  // Handle any errors
+
+2
 // Fetch the menu data from a JSON file
 fetch('menu-data.json')
     .then(response => response.json())  // Parse the JSON data
@@ -80,8 +112,12 @@ fetch('menu-data.json')
             card.classList.add('menu-card');  // Add the 'menu-card' class to the div
             card.setAttribute('data-category', item.category);  // Add a data-category attribute for filtering
 
+            // Format the category (e.g., "coffee_and_tea" becomes "Coffee and Tea")
+            const formattedCategory = item.category.replace(/_/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
+
             // Set the inner HTML of the card
             card.innerHTML = `
+                <div class="category-label">${formattedCategory}</div>
                 <img src="${item.image}" alt="${item.name}">
                 <h3>${item.name}</h3>
                 <p>${item.price}</p>
@@ -96,4 +132,4 @@ fetch('menu-data.json')
     })
     .catch(error => console.error('Error fetching menu data:', error));  // Handle any errors
 
-
+// 3
