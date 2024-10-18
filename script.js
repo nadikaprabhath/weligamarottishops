@@ -192,3 +192,10 @@ fetch('menu-data.json')
     .catch(error => console.error('Error fetching menu data:', error));  // Handle any errors
 
 // 3
+
+window.addEventListener("orientationchange", function() {
+    if (window.orientation === 90 || window.orientation === -90) {
+        alert("Please use portrait mode.");
+        // Optionally, you can add a function to redirect or adjust the page layout.
+    }
+});
