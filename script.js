@@ -142,15 +142,3 @@ scrollToTopBtn.onclick = function() {
 
 
 
-const rotateBlock = document.getElementById('rotateBlock');
-
-        // Listen for the 'deviceorientation' event to capture device rotation
-        window.addEventListener('deviceorientation', function(event) {
-            // Get the rotation values from the event object
-            const alpha = event.alpha;  // Rotation around the Z-axis (compass direction)
-            const beta = event.beta;    // Rotation around the X-axis (tilt forward/backward)
-            const gamma = event.gamma;  // Rotation around the Y-axis (tilt side-to-side)
-
-            // Apply the rotation to the block element using the device's orientation data
-            rotateBlock.style.transform = `rotate(${alpha}deg) rotateX(${beta}deg) rotateY(${gamma}deg)`;
-        });

@@ -12,42 +12,42 @@
         "name": "Prown Vegetable Cheese Rotti",
         "description": "",
         "price": "LKR 1450",
-        "image": "assert/img1.jpg"
+        "image": "assert/ck.jpeg"
     },
     {
         "category": "Rotti",
         "name": "Prown Cheese & Tomato Rotti",
         "description": "",
         "price": "LKR 1500",
-        "image": "assert/img1.jpg"
+        "image": "assert/roti.jpg"
     },
     {
         "category": "Rotti",
         "name": "Prown Vegetable Tomato Onion Rotti",
         "description": "",
         "price": "LKR 1600",
-        "image": "assert/img1.jpg"
+        "image": "assert/rdo.jpg"
     },
     {
         "category": "Rotti",
         "name": "Prown Vegetable Tomato Onion With Cheese Rotti",
         "description": "",
         "price": "LKR 1900",
-        "image": "assert/img1.jpg"
+        "image": "assert/rc.jpg"
     },
     {
         "category": "Rotti",
         "name": "Fish Vegetable Rotti",
         "description": "",
         "price": "LKR 900",
-        "image": "assert/img1.jpg"
+        "image": "assert/rac.jpg"
     },
     {
         "category": "Rotti",
         "name": "Fish Vegetable Cheese Rotti",
         "description": "",
         "price": "LKR 1500",
-        "image": "assert/img1.jpg"
+        "image": "assert/ck2.jpg"
     },
     {
         "category": "Rotti",
