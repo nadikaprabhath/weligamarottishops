@@ -47,29 +47,8 @@ function filterMenu(category) {
     });
 }
 
-// // Search Menu
-// function searchMenu() {
-//     const searchValue = document.getElementById('searchInput').value.toLowerCase();
-//     const category = document.querySelector('.filter-button.active').getAttribute('data-filter');
-//     const cards = document.querySelectorAll('.menu-card');
-
-//     // Filter the cards based on the active category and search term
-//     cards.forEach(card => {
-//         const cardCategory = card.getAttribute('data-category');
-//         const cardTitle = card.querySelector('h3').textContent.toLowerCase();
-
-//         if ((category === 'all' || cardCategory === category) && cardTitle.includes(searchValue)) {
-//             card.style.display = 'block';
-//         } else {
-//             card.style.display = 'none';
-//         }
-//     });
-// }
-
+// Search Menu
 function searchMenu() {
-    // Clear the search bar when changing the category
-    document.getElementById('searchInput').value = '';  // Reset search bar
-    
     const searchValue = document.getElementById('searchInput').value.toLowerCase();
     const category = document.querySelector('.filter-button.active').getAttribute('data-filter');
     const cards = document.querySelectorAll('.menu-card');
@@ -86,7 +65,6 @@ function searchMenu() {
         }
     });
 }
-
 
 // 1
 // // Fetch the menu data from a JSON file
