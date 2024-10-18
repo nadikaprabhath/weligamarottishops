@@ -259,9 +259,6 @@ h2 {
     background-color: #e04b00;
 }
 
-/*  */
-
-
 .close {
     position: absolute;
     top: 15px;
@@ -395,3 +392,4 @@ footer p {
         font-size: 0.5rem;
     }
 }
+
