@@ -22,7 +22,7 @@ window.onclick = function(event) {
 
 // Filter Menu by Category
 function filterMenu(category) {
-    const searchValue = document.getElementById('searchInput').value.toLowerCase();
+    const searchValue = document.getElementById('searchInput').value= ''; // .toLowerCase()
     const cards = document.querySelectorAll('.menu-card');
     const buttons = document.querySelectorAll('.filter-button');
 
@@ -47,6 +47,35 @@ function filterMenu(category) {
     });
 }
 
+// Filter Menu by Category
+// function filterMenu(category) {
+//     // Clear the search input field to reset the search history
+//     document.getElementById('searchInput').value = '';  // Reset search history
+
+//     const cards = document.querySelectorAll('.menu-card');
+//     const buttons = document.querySelectorAll('.filter-button');
+
+//     // Highlight the active filter button
+//     buttons.forEach(button => {
+//         button.classList.remove('active');
+//         if (button.getAttribute('data-filter') === category) {
+//             button.classList.add('active');
+//         }
+//     });
+
+//     // Filter the cards based on category and reset search value (since it is cleared)
+//     cards.forEach(card => {
+//         const cardCategory = card.getAttribute('data-category');
+//         if (category === 'all' || cardCategory === category) {
+//             card.style.display = 'block';
+//         } else {
+//             card.style.display = 'none';
+//         }
+//     });
+// }
+
+
+
 // Search Menu
 function searchMenu() {
     const searchValue = document.getElementById('searchInput').value.toLowerCase();
@@ -65,6 +94,8 @@ function searchMenu() {
         }
     });
 }
+
+
 
 // 1
 // // Fetch the menu data from a JSON file
@@ -97,7 +128,7 @@ function searchMenu() {
 //     })
 //     .catch(error => console.error('Error fetching menu data:', error));  // Handle any errors
 
-2
+// 2
 // Fetch the menu data from a JSON file
 fetch('menu-data.json')
     .then(response => response.json())  // Parse the JSON data
