@@ -74,8 +74,6 @@ function filterMenu(category) {
 //     });
 // }
 
-
-
 // Search Menu
 // function searchMenu() {
 //     const searchValue = document.getElementById('searchInput').value.toLowerCase();
@@ -96,12 +94,43 @@ function filterMenu(category) {
 // }
 
 
-// Search Menu
+// // Search Menu
+// function searchMenu() {
+//     const searchValue = document.getElementById('searchInput').value.toLowerCase();
+//     const activeCategoryButton = document.querySelector('.filter-button.active');
+//     const category = activeCategoryButton ? activeCategoryButton.getAttribute('data-filter') : 'all';  // Default to 'all' if no active button
+//     const cards = document.querySelectorAll('.menu-card');
+
+//     // Filter the cards based on the active category and search term
+//     cards.forEach(card => {
+//         const cardCategory = card.getAttribute('data-category');
+//         const cardTitle = card.querySelector('h3').textContent.toLowerCase();
+
+//         if ((category === 'all' || cardCategory === category) && cardTitle.includes(searchValue)) {
+//             card.style.display = 'block';
+//         } else {
+//             card.style.display = 'none';
+//         }
+//     });
+// }
+
+// // Add event listener to reset category when search bar is focused (if needed)
+// document.getElementById('searchInput').addEventListener('focus', function() {
+//     const activeCategoryButton = document.querySelector('.filter-button.active');
+//     if (activeCategoryButton && activeCategoryButton.getAttribute('data-filter') !== 'all') {
+//         // Optional: If you want to reset to 'all' when focusing the search field
+//         filterMenu('all');
+//     }
+// });
+
+
+// worh code 123
 function searchMenu() {
     const searchValue = document.getElementById('searchInput').value.toLowerCase();
     const activeCategoryButton = document.querySelector('.filter-button.active');
     const category = activeCategoryButton ? activeCategoryButton.getAttribute('data-filter') : 'all';  // Default to 'all' if no active button
     const cards = document.querySelectorAll('.menu-card');
+    let foundResults = false;  // Flag to check if any results are found
 
     // Filter the cards based on the active category and search term
     cards.forEach(card => {
@@ -110,20 +139,32 @@ function searchMenu() {
 
         if ((category === 'all' || cardCategory === category) && cardTitle.includes(searchValue)) {
             card.style.display = 'block';
+            foundResults = true;  // Set flag to true when at least one result is found
         } else {
             card.style.display = 'none';
         }
     });
+
+    // Show or hide the "No results found" message based on whether results were found
+    const noResultsMessage = document.getElementById('no-results-message');
+    if (foundResults) {
+        noResultsMessage.style.display = 'none';  // Hide the message if results were found
+    } else {
+        noResultsMessage.style.display = 'block';  // Show the message if no results were found
+    }
 }
 
-// Add event listener to reset category when search bar is focused (if needed)
+// Add event listener to reset category when search bar is focused (optional)
 document.getElementById('searchInput').addEventListener('focus', function() {
     const activeCategoryButton = document.querySelector('.filter-button.active');
     if (activeCategoryButton && activeCategoryButton.getAttribute('data-filter') !== 'all') {
-        // Optional: If you want to reset to 'all' when focusing the search field
+        // Optional: Reset category to 'all' when focusing the search field
         filterMenu('all');
     }
 });
+
+
+
 
 // 1
 // // Fetch the menu data from a JSON file
@@ -193,9 +234,23 @@ fetch('menu-data.json')
 
 // 3
 
-window.addEventListener("orientationchange", function() {
-    if (window.orientation === 90 || window.orientation === -90) {
-        alert("Please use portrait mode.");
-        // Optionally, you can add a function to redirect or adjust the page layout.
-    }
-});
+// Get the button
+let scrollToTopBtn = document.getElementById("scrollTopBtn");
+
+// When the user scrolls down 150px from the top of the document, show the button
+window.onscroll = function() {
+  if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+    scrollToTopBtn.classList.add("show");
+  } else {
+    scrollToTopBtn.classList.remove("show");
+  }
+};
+
+// When the user clicks the button, scroll to the top of the document
+scrollToTopBtn.onclick = function() {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+};
+
